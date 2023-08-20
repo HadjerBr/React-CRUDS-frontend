@@ -30,7 +30,7 @@ function OldReceipts() {
   
 
   const fetchData =  () => {
-    Axios.get('http://localhost:5000/').then(resp => {
+    Axios.get('https://reciepts-backend.onrender.com/').then(resp => {
         
         setFisler(resp.data.fisler);
         setTitle(resp.data.title);
@@ -58,7 +58,7 @@ function OldReceipts() {
      
     
       try {
-        const response = await Axios.post(`http://localhost:5000/search/`, {
+        const response = await Axios.post(`https://reciepts-backend.onrender.com/search/`, {
           search: searchValue.search 
         });
     
@@ -80,7 +80,7 @@ function OldReceipts() {
   const handleDelete = (itemId) => {
     
 
-    Axios.delete(`http://localhost:5000/${itemId}`)
+    Axios.delete(`https://reciepts-backend.onrender.com/${itemId}`)
       .then(response => {
         console.log(response.data.message);
         

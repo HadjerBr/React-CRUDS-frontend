@@ -26,7 +26,7 @@ const Signup = () => {
 
 
   const fetchData =  () => {
-    Axios.get('http://localhost:5000/signup').then(resp => {
+    Axios.get('https://reciepts-backend.onrender.com/signup').then(resp => {
         
         setTitle(resp.data.title);
         
@@ -42,7 +42,7 @@ const Signup = () => {
     setErrors({}); 
 
     try {
-      const response = await Axios.post('http://localhost:5000/signup',formValues);
+      const response = await Axios.post('https://reciepts-backend.onrender.com/signup',formValues);
 
       const data = response.data;
       if (data.errors) {

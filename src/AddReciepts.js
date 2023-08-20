@@ -38,7 +38,7 @@ function AddReciepts() {
     const history = useHistory();
 
     const getTitle = ()  => {
-        Axios.get('http://localhost:5000/add').then(resp => {
+        Axios.get('https://reciepts-backend.onrender.com/add').then(resp => {
 
             setTitle(resp.data.title);
             setMessage(resp.data.message);
@@ -70,7 +70,7 @@ function AddReciepts() {
       console.log('Table 1 values submitted:', table1Values);
       console.log('Table 2 values submitted:', table2Values);
       try {
-        const response = await Axios.post(`http://localhost:5000/`, requestData);
+        const response = await Axios.post(`https://reciepts-backend.onrender.com`, requestData);
     
         if (response.status === 200) {
           

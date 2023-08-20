@@ -8,7 +8,7 @@ function Login() {
   const [title, setTitle] = useState('');
 
   const fetchData =  () => {
-    Axios.get('http://localhost:5000/login').then(resp => {
+    Axios.get('https://reciepts-backend.onrender.com/login').then(resp => {
         
         setTitle(resp.data.title);
         
@@ -22,7 +22,7 @@ function Login() {
     setError('');
 
     try {
-      const response = await Axios.post('http://localhost:5000/login', { username, password });
+      const response = await Axios.post('https://reciepts-backend.onrender.com/login', { username, password });
       const data = response.data;
 
       if (data.errors) {

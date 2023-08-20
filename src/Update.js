@@ -47,7 +47,7 @@ function Update() {
     const [successMessage, setsuccessMessage] = useState([]);
 
     const fetchData =  () => {
-      Axios.get('http://localhost:5000/update/' + id).then(resp => {
+      Axios.get('https://reciepts-backend.onrender.com/update/' + id).then(resp => {
           
           setFis(resp.data.fis);
           setTitle(resp.data.title);
@@ -80,7 +80,7 @@ function Update() {
      
     
       try {
-        const response = await Axios.post(`http://localhost:5000/update/${id}`, formValues);
+        const response = await Axios.post(`https://reciepts-backend.onrender.com/update/${id}`, formValues);
     
         if (response.status === 200) {
           if(response.data.message === "Error updating receipt, try again") {

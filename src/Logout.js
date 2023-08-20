@@ -9,7 +9,7 @@ function Logout() {
     const logout = async () => {
       try {
         
-        const response = await axios.get('http://localhost:5000/logout');
+        const response = await axios.get('https://reciepts-backend.onrender.com/logout');
 
         const data = response.data;
         
