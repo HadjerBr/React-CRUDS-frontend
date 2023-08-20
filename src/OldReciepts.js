@@ -35,6 +35,7 @@ function OldReceipts() {
         setFisler(resp.data.fisler);
         setTitle(resp.data.title);
         setMessage(resp.data.message);
+        console.log("sending");
     });
     
   };
