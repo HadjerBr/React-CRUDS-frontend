@@ -23,6 +23,9 @@ const App = () => {
         <Navbar />
         <div className="content">
           <Switch>
+          <Route path="/">
+              <OldReciepts />
+            </Route>
           <Route path="/signup">
               <Signup />
             </Route>
@@ -44,9 +47,7 @@ const App = () => {
               <Update />
             </Route>
             
-            <Route path="/">
-              <OldReciepts />
-            </Route>
+            
 
             
 
